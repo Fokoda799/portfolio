@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Bubbles&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+
+/* Apply smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+  
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1; /* Background of the scrollbar track */
+border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #888; /* Color of the scrollbar thumb */
+border-radius: 10px; /* Rounded corners for the thumb */
+border: 2px solid #f1f1f1; /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Darker color when hovering over the scrollbar */
+}
+
+/* Firefox scrollbar customization */
+* {
+scrollbar-width: thin;
+scrollbar-color: #888 #f1f1f1;
+}
+
+/* Scrollbar track styling for Firefox */
+*::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Scrollbar thumb styling for Firefox */
+*::-webkit-scrollbar-thumb {
+background-color: #888;
+border-radius: 10px;
+border: 2px solid #f1f1f1;
+}
+
+/* Scrollbar thumb hover effect for Firefox */
+*::-webkit-scrollbar-thumb:hover {
+background-color: #555;
+}
+  
+
+/* Reset CSS */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+header {
+    background-color: lightgray;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+header.active {
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    color: darkmagenta !important;
+}
+
+.logo {
+    font-family: "Ysabeau Infant", sans-serif;
+    text-decoration: none;
+    color: darkorchid;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+.navigation a{
+    color: darkorchid;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: darkmagenta;
+    cursor: pointer;
+}
+
+
+/* Main */
+section {
+    padding: 100px 200px;  
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    background-image: url('imgs/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 8px;
+    color: darkorchid;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #fff;
+    background-color: darkorchid;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: darkmagenta;
+    transform: scale(1.1);
+}
+
+.social-icons a{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 35px;
+    transition: 0.7s ease;
+}
+
+.social-icons a:hover {
+    color: darkgray;
+    transform: scale(1.2)
+}
+
+
+/* Services */
+.title {
+    display: flex;
+    justify-content: center;
+    color: rgb(95, 11, 138);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content .card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin:  15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icon {
+    color: rgb(95, 11, 138);
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: rgb(95, 11, 138);
+    font-size: 1.7em;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.info h3 span {
+    color: greenyellow;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+
+/* Projects */
+.projects {
+    background-color: lightgray;
+}
+
+.projects .title {
+    color: darkorchid;
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 5px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.project-card:hover .project-img {
+    opacity: 0.9;
+}
+
+.project-img img{
+    width: 100%;
+
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.project-title a{
+    text-decoration: none;
+    color: darkorchid;
+}
+
+.project-title a:hover {
+    color: darkmagenta;
+}
+ 
+
+/* Contact */
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+
+/* Footer */
+.footer {
+    background-color:  #000;
+    color: #FFF;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0 12px 0 0;
+}
+
+
+/* Responsive */
+@media (max-width:1023px) {
+    header {
+        padding: 12px 5px;
+    }
+
+    .navigation .logo {
+        font-size: 1em;
+    }
+
+    .navigation a{
+        padding-left: 10px; 
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    .social-icons a {
+        padding-right: 20px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .main h3{
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .main h2 {
+        font-size: 0.8em;
+    }
+
+    .main h3{
+        font-size: 1.4em;
+    }
+
+    .main-btn {
+        font-size: 0.9em;
+    }
+
+    .social-icons a{
+        font-size: 1.5em;
+    }
+
+    .content .card {
+        width: 18em;
+    }
+
+    .icon {
+        font-size: 6em;
+    }
+
+    .info h3 {
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        width: 20em;
+    }
+
+    .project-title {
+        font-size: 0.9em;
+    }
+
+    .contact .icon {
+        font-size: 3.5em;
+    }
+
+    .contact .info h3 {
+        font-size: 1.3em;
+    }
+
+    .contact .info p {
+        font-size: 1.3em;
+    }
+
+    .footer-title {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 12px 5px;
+    }
+
+    .navigation .logo {
+        font-size: 0.8em;
+    }
+
+    .navigation a{
+        padding-left: 10px; 
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main h2 {
+        font-size: 0.8em;
+    }
+
+    .main h3{
+        font-size: 1.4em;
+    }
+
+    .main-btn {
+        font-size: 0.9em;
+    }
+
+    .social-icons a{
+        font-size: 1.5em;
+    }
+
+    .content .card {
+        width: 18em;
+    }
+
+    .icon {
+        font-size: 6em;
+    }
+
+    .info h3 {
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        width: 20em;
+    }
+
+    .project-title {
+        font-size: 0.9em;
+    }
+
+    .contact .icon {
+        font-size: 3.5em;
+    }
+
+    .contact .info h3 {
+        font-size: 1.3em;
+    }
+
+    .contact .info p {
+        font-size: 1.3em;
+    }
+
+    .footer-title {
+        font-size: 0.9em;
+    }
+}
