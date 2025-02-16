@@ -5,116 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Port folio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></head>
 <body>
     
     <!--Header-->
-    <header>
-        <a href="#" class="logo">Abdellah</a>
-        <nav class="navigation">
-            <a href="#services">ser</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
+    <header id="header">
+        <a href="#" class="logo">HAdid</a>
+        <nav class="sections-bar">
+            <ul>
+                <li>Bio</li>  <!-- Matches section 1 -->
+                <li>Portfolio</li>  <!-- Matches section 2 -->
+                <li>Elevator Pitch</li>  <!-- Matches section 3 -->
+                <li>Contact</li>  <!-- Matches section 4 -->
+            </ul>
+        </nav>
+        <nav class="btns-bar">
+            <ul>
+                <li>share</li>
+                <li>Dark</li>
+            </ul>
         </nav>
     </header>
 
     <!--Main-->
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Abdellah<br><span>ALX student</span></h2>
-            <h3>Still learning...  5%</h3>
-            <a href="#projects" class="main-btn">View my work</a>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
+    <main class="container">
 
-    <!--Services-->
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-pen-nib"></i>
-                </div>
-                <div class="info">
-                    <h3>Graphic Designe</h3>
-                    <p>Designing logos, banners, flyers, etc., involves creating visually appealing graphics that convey a brand's identity, message, or event, ensuring consistency, creativity, and effective communication.</p>
+        <!-- Home -->
+        <section class="home section" data-logo-color="#000" data-header-bg="transparent">
+            <div class="hero">
+                <h2>Hi, I'm Abdellah Hadid!</h2>
+                <p>Full Stack Software Engineer:~$</p>
+                <button id="more">Explore More</button>
+                <div class="social-icons">
+                    <a class="a" href="https://www.linkedin.com/in/abdellah-hadid/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="b" href="https://github.com/Fokoda799" target="_blank"><i class="fa-brands fa-github" ></i></a>
+                    <a class="c" href="https://x.com/AbdllahUp96" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a class="d" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <div class="info">
-                    <h3>Web devlopment<br><span>(an sha' allah)</span></h3>
-                    <p>Building and maintaining websites, including front-end, back-end, and full-stack development.</p>
+            <div class="img-container">
+                <img src="imgs/bg.png" alt="Abdellah">
+            </div>
+            <!-- <div class="arrow"><img src="imgs/arrow_d.png" alt="arrow down"></div> -->
+        </section>
+
+        <!-- Bio -->
+        <section id="bio" class="bio section" data-logo-color="#fff">
+            <div class="bio__container container">
+                <div class="bio__grid">
+                    <!-- Image Card -->
+                    <div class="bio__frame">
+                        <div class="bio__image-wrapper">
+                            <!-- Circular Image -->
+                            <div class="bio__image-circle">
+                                <img src="imgs/Abdellah.jpeg" alt="Abdellah Hadid" class="bio__image">
+                            </div>
+                            <!-- Button -->
+                            <button class="bio__resume btn--primary">
+                                <span>Download Resume</span>
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5zm-7 4h14v-2H5v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Content Card -->
+                    <div class="bio__content">
+                        <div class="bio__header">
+                            <h2 class="bio__title heading-2">
+                                <span class="text-gradient">A Few Words About Me</span>
+                            </h2>
+                            <div class="bio__decoration">
+                                <div class="line"></div>
+                                <div class="square"></div>
+                            </div>
+                        </div>
+                        <div class="bio__text">
+                            <p class="paragraph-lg">
+                                Hey! My name is Abdellah Nait Hadid. I am a passionate self-taught software developer with a deep curiosity for building innovative and scalable tech solutions. My journey into tech is driven by a strong desire to create transformative software—from web applications and backend systems to game engines and even operating systems.
+
+                                I have honed my skills through hands-on experience, building projects like e-commerce platforms, API-driven applications, and multiplayer gaming systems. My learning path has been shaped by structured programs like the ALX Software Engineering Program, along with continuous exploration of full-stack development, system architecture, and cloud computing.
+
+                                My goal is to launch my own tech company, creating software that pushes the boundaries of innovation. With a strong foundation in problem-solving, perseverance, and a relentless drive to learn, I am committed to building technology that makes a meaningful impact.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-uncharted"></i>
+        </section>
+        
+
+        <!-- Portfolio -->
+        <section class="portfolio section" data-logo-color="#000">
+            <div class="popup"></div>
+            <div class="portfolio__container container">
+                <div class="portfolio__header">
+                    <p class="portfolio__subtitle">
+                        A showcase of my latest projects and creative work.
+                    </p>
                 </div>
-                <div class="info">
-                    <h3>Software Development<br><span>(an sha' allah)</span></h3>
-                    <p>Writing and testing software applications, often including mobile app development.</p>
+
+                <div class="portfolio__grid"></div>
+            </div>
+            <div class="project__popup">
+                <!-- Close Button -->
+                <button class="project__close">
+                    <img src="imgs/close.svg" alt="Close" class="project__close-icon">
+                </button>
+            
+                <!-- Project Header -->
+                <div class="project__header">
+                    <h2 class="project__title"></h2>
+                    <p class="project__category">Web Development</p>
+                </div>
+            
+                <!-- Project Content -->
+                <div class="project__content">
+                    <div class="project__thumbnail">
+                        <img class="project__image" src="imgs/project-thumbnail.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project__description">
+                        <p>
+                            This is a detailed description of the project. It highlights the key features,
+                            technologies used, and the challenges overcome during development.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Actions -->
+                <div class="project__actions">
+                    <a href="#" class="project__link" target="_blank">
+                        <img src="imgs/live-demo.svg" alt="Live Demo">
+                        <span>Live Demo</span>
+                    </a>
+                    <a href="#" class="project__link" target="_blank">
+                        <img src="imgs/github.svg" alt="GitHub">
+                        <span>View Code</span>
+                    </a>
+                </div>
+            
+                <!-- Footer -->
+                <div class="project__footer">
+                    <button class="project__close-btn">Close</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--Projects-->
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="imgs/nothing.jpg" alt="">
-                </div>
-                <div class="project-info">
-                    <p class="category">Sorry, there is no project currently.</p>
-                    <strong class="project-title">
-                        <span>An sha' allah)</span>
-                        <a href="#">More details</a>
-                    </strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-regular fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>business@email.com</p>
+        <section class="elevator-pitch section" data-logo-color="#fff">
+            <div class="elevator-pitch__container container">
+                <div class="elevator-pitch__content">
+                    <div class="elevator-pitch__text">
+                        <p class="elevator-pitch__paragraph">
+                            I'm passionate about building impactful technologies. I recently graduated from the <strong>ALX Software Engineering Program</strong>, with experience in backend development using <strong>Node.js</strong>, <strong>Express</strong>, <strong>Redis</strong>, and <strong>MongoDB</strong>.
+                        </p>
+                        <p class="elevator-pitch__paragraph">
+                            I’m proficient in languages like <strong>Java</strong>, <strong>React</strong>, and <strong>TypeScript</strong>, and I’m always learning new tools to stay ahead in the tech industry. What sets me apart is my ability to solve complex problems, work independently, and collaborate effectively.
+                        </p>
+                        <p class="elevator-pitch__paragraph">
+                            I’m looking for opportunities to contribute my backend skills to innovative projects. If you're seeking a dedicated engineer who can drive results, I'd love to connect and discuss how I can help your team.
+                        </p>
+                    </div>
+                    <div class="elevator-pitch__cta">
+                        <a href="#contact" class="elevator-pitch__link btn--primary">
+                            Let's Connect
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p class="footer-title">Abdellah Hadid &copy; All rights reserved.<br><span>2024</span></p>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </footer>
+        <section id="contact" class="contact section" data-logo-color="#000">
+            <div class="contact__container container">
+                <div class="contact__header">
+                    <h2 class="contact__title">
+                        <span class="text-gradient">Let's Work Together</span>
+                    </h2>
+                    <p class="contact__subtitle">
+                        Have a project in mind or just want to say hello? I'd love to hear from you!
+                    </p>
+                </div>
+        
+                <div class="contact__grid">
+                    <!-- Contact Form -->
+                    <div class="contact__form-wrapper">
+                        <form class="contact__form">
+                            <div class="info">
+                                <div class="info-group">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                                <div class="info-group">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="contact__submit btn--primary">
+                                Send Message
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
+        <!--Footer-->
+        <footer class="section" data-logo-color="#fff">
+            <div class="footer__contact-bar">
+                <div class="footer__contact-info">
+                    <a href="abdllahhadid@gmail.com">abdllahhadid@gmail.com</a>
+                    <a href="tel:+212712181985">+212 712181985</a>
+                </div>
+            </div>
+        
+            <div class="footer__header">
+                <div class="footer__profile">
+                    <h1>Abdellah HAdid</h1>
+                    <p>Full Stack Software Engineer</p>
+                </div>
+            </div>
+        
+            <nav class="footer__navigation">
+                <a href="#about">About Me</a>
+                <a href="#projects">Featured Projects</a>
+                <a href="#testimonials">Elevator Pitch</a>
+                <a href="#contact">Contact Me</a>
+            </nav>
+        
+            <div class="footer">
+                <p>© Created by Abdellah Hadid</p>
+                <p>All rights Reserved</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="scripts/smouthScroll.js"></script>
+    <script src="scripts/portfolioItems.js"></script>
 </body>
 </html>

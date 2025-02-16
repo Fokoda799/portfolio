@@ -1,24 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('header'); // Correctly select the header element
-    const sections = document.querySelectorAll('.projects'); // Select all sections with the class 'projects'
+const container = document.querySelector('.container');
+const sections = document.querySelectorAll('.section');
+let isScrolling = false;
 
-    const options = {
-        root: null, // Use the viewport as the root
-        rootMargin: '-60px 0px 0px 0px', // Offset to account for the header height
-        threshold: 0 // Trigger as soon as even one pixel is visible
-    };
+function scrollToSection(index) {
+    if (isScrolling) return;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                header.classList.add('active'); // Add 'active' class when section is intersecting
-            } else {
-                header.classList.remove('active'); // Remove 'active' class when section is not intersecting
-            }
-        });
-    }, options);
+    isScrolling = true;
+    const targetSection = sections[index];
+    const targetPosition = targetSection.offsetTop;
 
-    sections.forEach(section => {
-        observer.observe(section); // Observe each section
+    container.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
     });
+
+    updateHeader(newIndex);
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 500); // Adjust timeout to match scroll duration
+}
+
+// Handle wheel events
+container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const currentIndex = Math.floor(container.scrollTop / window.innerHeight);
+    const direction = e.deltaY > 0 ? 1 : -1;
+    const newIndex = Math.max(0, Math.min(currentIndex + direction, sections.length - 1));
+
+    scrollToSection(newIndex);
+}, { passive: false });
+
+// Handle keyboard events
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const currentIndex = Math.floor(container.scrollTop / window.innerHeight);
+        const direction = e.key === 'ArrowDown' ? 1 : -1;
+        const newIndex = Math.max(0, Math.min(currentIndex + direction, sections.length - 1));
+
+        scrollToSection(newIndex);
+    }
 });

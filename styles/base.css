@@ -1,0 +1,270 @@
+/* Reset */
+
+/* 1. Box-sizing: border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Reset default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 3. Set body font and line height */
+html,
+body {
+  font-family: 'Poppins', sans-serif; /* Default font-family, can be customized */
+  line-height: 1.5; /* Ensures readable text spacing */
+  -webkit-font-smoothing: antialiased; /* For smoother text rendering on webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* For smoother text rendering on Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* 4. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 5. Remove quotes from blockquotes */
+blockquote {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '';
+}
+
+/* 6. Remove default table border spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 7. Ensure all images are responsive */
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 8. Prevent unwanted underlines on links */
+a {
+  text-decoration: none;
+  color: inherit; /* Ensures links inherit the color of the surrounding text */
+}
+
+/* 9. Remove focus outline from interactive elements (optional) */
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+/* 10. Set default font size and padding for form elements */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* 11. Normalize button behavior */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* 12. Remove default vertical spacing on line breaks */
+br {
+  display: none; /* Optional: removes the extra space between line breaks */
+}
+
+/* 13. Reset for `code`, `pre`, `kbd`, and similar elements */
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Courier New', monospace;
+}
+
+/* 14. Remove the border from fieldset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 15. Standardize form label behavior */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* 16. Set default styles for HTML5 elements */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* 17. Disable text selection (optional) */
+::selection {
+  background-color: rgba(0, 0, 0, 0.2); /* Highlight background */
+  color: white;
+}
+
+/* Typography Styles */
+
+/* Global Font Family */
+body {
+  font-family: 'Roboto', sans-serif; /* Primary font */
+  line-height: 1.6; /* Default line height for readability */
+  font-size: 16px; /* Base font size */
+  color: var(--text-color, #333); /* Fallback color */
+  background-color: var(--background-color, #fff); /* Background color */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* A different font for headings */
+  font-weight: 700;
+  color: var(--primary-color, #4CAF50);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* H1 */
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+/* H2 */
+h2 {
+  font-size: 2rem; /* 32px */
+}
+
+/* H3 */
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+/* H4 */
+h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+/* H5 */
+h5 {
+  font-size: 1.25rem; /* 20px */
+}
+
+/* H6 */
+h6 {
+  font-size: 1rem; /* 16px */
+}
+
+/* Links */
+a {
+  font-size: 1rem; /* 16px */
+  color: var(--link-color, #0066cc);
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+/* Blockquote */
+blockquote {
+  font-size: 1.125rem; /* 18px */
+  font-style: italic;
+  color: var(--blockquote-color, #555);
+  border-left: 4px solid var(--primary-color, #4CAF50);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* Lists */
+ul,
+ol {
+  font-size: 1rem; /* 16px */
+  margin-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Strong Text */
+strong {
+  font-weight: bold;
+}
+
+/* Emphasized Text */
+em {
+  font-style: italic;
+}
+
+/* Small Text */
+small {
+  font-size: 0.875rem; /* 14px */
+  color: var(--secondary-text-color, #666);
+}
+
+/* Code */
+code {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem; /* 16px */
+  background-color: var(--code-background, #f4f4f4);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Preformatted Text */
+pre {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem; /* 16px */
+  background-color: var(--code-background, #f4f4f4);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Custom Typography Variables */
+:root {
+  --text-color: #4A4A4A;
+  --primary-color: #2D4059;
+  --secondary-color:#556270;
+  --link-color: #4CAF93;
+  --link-hover-color: #2196F3;
+  --background-color: #f5f5f5;
+  --background-color2: #9E9E9E;
+  --blockquote-color: #555;
+  --secondary-text-color: #717171;
+  --code-background: #f4f4f4;
+}
