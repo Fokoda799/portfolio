@@ -4,3 +4,7 @@
 @import './utils.css';
 @import './sections/contact.css';
 @import './sections/footer.css';
+@import './sections/home.css';
+@import './sections/bio.css';
+@import './sections/portfolio.css';
+@import './sections/elevator.css';

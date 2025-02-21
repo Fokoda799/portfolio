@@ -45,7 +45,10 @@
 /* Contact Form */
 .contact__form-wrapper {
   background: #fff;
+  border: 3px solid #000;
+  border-radius: 15px;
   padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact__form {
@@ -70,10 +73,10 @@
 .info-group input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   font-size: 1rem;
   background: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inconsolata', monospace;
   transition: border-color 0.3s ease;
 }
 
@@ -88,6 +91,7 @@
   left: 1rem;
   padding: 0 0.5rem;
   color: #7f8c8d;
+  font-family: 'Inconsolata', monospace;
   background-color: #fff;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -113,7 +117,7 @@
   height: 70px;
   padding: 1rem;
   border: 2px solid #e0e0e0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inconsolata', monospace;
   font-size: 1rem;
   background: transparent;
   transition: border-color 0.3s ease;
@@ -131,6 +135,7 @@
   background: white;
   padding: 0 0.5rem;
   color: #7f8c8d;
+  font-family: 'Inconsolata', monospace;
   transition: all 0.3s ease;
   pointer-events: none;
 }
