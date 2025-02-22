@@ -26,8 +26,6 @@ body {
   line-height: 1.5; /* Ensures readable text spacing */
   -webkit-font-smoothing: antialiased; /* For smoother text rendering on webkit browsers */
   -moz-osx-font-smoothing: grayscale; /* For smoother text rendering on Firefox */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 /* 4. Remove list styles */
@@ -260,7 +258,7 @@ pre {
   --text-color: #4A4A4A;
   --primary-color: #2D4059;
   --secondary-color:#556270;
-  --link-color: #4CAF93;
+  --link-color: rgb(76, 175, 147);
   --link-hover-color: #2196F3;
   --background-color: #f5f5f5;
   --background-color2: #9E9E9E;
