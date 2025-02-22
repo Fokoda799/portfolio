@@ -19,8 +19,6 @@ function updateHeader(currentIndex) {
         item.style.transform = `translateX(${(index - (currentIndex - 1)) * 20}px)`;
     });
 
-    logo.textContent = currentIndex === 0 || currentIndex === 5 ? 'HAdid' : 'HA';
-
     // Handle bars visibility
     const sectionsBar = document.querySelector('.sections-bar');
     sectionsBar.classList.toggle('visible', currentIndex >= 1 && currentIndex <= 4);
@@ -58,9 +56,7 @@ container.addEventListener('wheel', (e) => {
     const direction = e.deltaY > 0 ? 1 : -1;
     const newIndex = Math.max(0, Math.min(currentIndex + direction, sections.length - 1));
 
-    if (window.innerWidth > 768) {
-        scrollToSection(newIndex);
-    }
+    scrollToSection(newIndex);
 }, { passive: false });
 
 // Handle keyboard events
@@ -79,24 +75,4 @@ window.addEventListener('keydown', (e) => {
 const btn = document.getElementById("more");
 btn.addEventListener("click", function() {
     scrollToSection(1);
-});
-
-const home = document.querySelector('.logo');
-home.addEventListener("click", () => {
-    scrollToSection(0);
-})
-
-const sectionsBar = document.querySelector('.sections-bar');
-
-sectionsBar.addEventListener('click', (e) => {
-    const target = e.target;
-    if (target.tagName === 'LI') {
-        const index = Array.from(target.parentElement.children).indexOf(target);
-        scrollToSection(index + 1);
-    }
-
-})
-
-document.querySelector(".btn--projects").addEventListener("click", function() {
-    window.location = "pages/projects.html";
 });
