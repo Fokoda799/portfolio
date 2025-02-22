@@ -96,7 +96,3 @@ sectionsBar.addEventListener('click', (e) => {
     }
 
 })
-
-document.querySelector(".btn--projects").addEventListener("click", function() {
-    window.location = "../pages/projects.html";
-});
