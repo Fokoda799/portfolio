@@ -37,7 +37,7 @@
 
 /* Button */
 .bio__resume {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.5rem;
   margin: 2rem auto 0;
